@@ -61,8 +61,19 @@ h1, h2, h3, .logo {
     z-index: 100;
 }
 
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    color: var(--text-light);
+}
+
 .header-logo {
-    height: 120px;
+    height: 50px;
     width: auto;
 }
 
