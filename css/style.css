@@ -64,27 +64,27 @@ h1, h2, h3, .logo {
 .header-brand {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .header .logo {
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     color: var(--text-light);
 }
 
 .header-logo {
-    height: 50px;
+    height: clamp(50px, 8vw, 90px);
     width: auto;
 }
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    padding: 0 40px;
+    padding: 150px 40px 120px;
 }
 
 .hero-background {
@@ -101,9 +101,10 @@ h1, h2, h3, .logo {
 }
 
 .hero-title {
-    font-size: clamp(4rem, 12vw, 10rem);
+    font-size: clamp(3rem, 9vw, 8rem);
     color: var(--text-light);
     margin-bottom: 20px;
+    line-height: 1.05;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
