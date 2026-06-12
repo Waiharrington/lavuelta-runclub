@@ -3,12 +3,14 @@
 */
 
 :root {
-    --bg-dark: #000000;
-    --bg-light: #ffffff;
-    --accent: #8c603b; /* Bronce del logo */
-    --text-dark: #000000;
-    --text-light: #ffffff;
-    --gray: #333333;
+    --bg-dark: #52130C; /* Dark Fire */
+    --bg-light: #C4BAB3; /* Wool */
+    --accent: #741717; /* Red Wine */
+    --accent-light: #BD695D; /* Caramel */
+    --accent-deep: #603A30; /* Chestnut */
+    --text-dark: #52130C;
+    --text-light: #C4BAB3;
+    --gray: #BD695D;
     
     --font-display: 'Anton', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -125,8 +127,8 @@ h1, h2, h3, .logo {
 .btn-mega {
     display: block;
     width: 100%;
-    background-color: var(--accent);
-    color: var(--bg-dark);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
     font-family: var(--font-display);
     font-size: clamp(2rem, 4vw, 3rem);
     text-align: center;
@@ -136,7 +138,8 @@ h1, h2, h3, .logo {
 }
 
 .btn-mega:hover {
-    background-color: var(--bg-light);
+    background-color: var(--accent-light);
+    color: var(--text-light);
 }
 
 /* The Drop (Próxima Vuelta) */
@@ -267,7 +270,7 @@ h1, h2, h3, .logo {
 .ticker-item {
     font-family: var(--font-display);
     font-size: 3rem;
-    color: var(--bg-dark);
+    color: var(--bg-light);
     padding: 0 30px;
 }
 
