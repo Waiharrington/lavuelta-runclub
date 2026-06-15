@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Vuelta | Links</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png?v=1.0">
     <!-- Google Fonts: Anton para titulares masivos, Inter para legibilidad -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.2">
     <style>
         /* Linktree Specific Styles */
         .links-page {
-            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('assets/background.png');
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('assets/hero-bg-v3.png');
             background-size: cover;
-            background-position: center;
+            background-position: 80% center;
             background-attachment: fixed;
             background-color: var(--bg-dark);
             min-height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 60px 20px;
+            align-items: flex-start;
+            padding: 8vh 20px 60px 20px;
         }
         
         .links-container {
@@ -33,11 +35,14 @@
         }
 
         .links-logo {
-            height: 80px;
-            margin-bottom: 15px;
+            height: 150px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 30px;
         }
 
         .links-title {
+            font-family: var(--font-display);
             font-size: 2rem;
             margin-bottom: 30px;
             color: var(--text-light);
@@ -91,13 +96,13 @@
 </head>
 <body class="links-page">
     <div class="links-container">
-        <img src="assets/logo.png" alt="La Vuelta Logo" class="links-logo">
-        <h1 class="links-title">LA VUELTA.</h1>
+        <!-- Brand Logo Image -->
+        <img src="assets/logo-round.png" alt="La Vuelta Logo" class="links-logo" style="height: 150px; width: auto; object-fit: contain;">
         
         <div class="links-grid">
             <a href="index.html" class="btn-linktree">PÁGINA PRINCIPAL</a>
             <a href="https://chat.whatsapp.com/Cp3RDa8gnTD4KBhGJkbCvA?mode=gi_t" class="btn-linktree primary">UNIRSE AL WHATSAPP</a>
-            <a href="#" class="btn-linktree">EVENTOS (PRÓXIMAMENTE)</a>
+            <a href="index.html#unirme" class="btn-linktree">PRÓXIMO EVENTO: 14 DE JUNIO</a>
             <a href="#" class="btn-linktree">MERCH OFICIAL (PRÓXIMAMENTE)</a>
         </div>
     </div>

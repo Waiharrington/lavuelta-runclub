@@ -3,33 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Vuelta Run Club | Maracay</title>
+    <title>La Vuelta Running Co. | Maracay</title>
     <meta name="description" content="Comunidad runner en Maracay. No importa tu ritmo. La vuelta se da juntos.">
-    <!-- Google Fonts: Anton para titulares masivos, Inter para legibilidad -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png?v=1.0">
+    
+    <!-- Google Fonts: Anton (titulares masivos), Inter (legibilidad), Outfit (detalles secundarios) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css?v=4.6">
+    <style>
+        @media (min-width: 769px) {
+            .the-crew {
+                background-position: center 96% !important;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Flotante Minimalista -->
+    <!-- Film Grain Overlay -->
+    <div class="film-grain"></div>
+
+    <!-- Header Flotante Minimalista Glassmorphic -->
     <header class="header">
-        <div class="header-brand">
-            <img src="assets/logo.png" alt="La Vuelta Logo" class="header-logo">
-            <div class="logo">LA VUELTA.</div>
+        <div class="container header-container">
+            <div class="header-brand">
+                <img src="assets/logo-linear.png" alt="La Vuelta Logo" class="header-logo">
+            </div>
+            
+            <nav class="header-nav">
+                <a href="#" class="nav-link active">Inicio</a>
+                <a href="#manifesto" class="nav-link">Manifiesto</a>
+                <a href="#crews" class="nav-link">Origen</a>
+                <a href="#unirme" class="nav-link" style="display: none;">Próximo Evento</a>
+                <a href="#faqs" class="nav-link">Preguntas</a>
+            </nav>
+
+            <button class="mobile-nav-toggle" aria-label="Menu de navegación">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
 
     <!-- Hero Inmersivo -->
     <section class="hero">
         <div class="hero-background"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">NO IMPORTA TU RITMO.<br>LA VUELTA SE DA <span class="bronze-text">JUNTOS.</span></h1>
-            <p class="hero-subtitle">CORRE. COMPARTE. CONECTA. VUELVE.</p>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title reveal-left" style="transition-delay: 0.1s;">
+                    <span class="hero-word" style="--d: 0.2s;">LA</span> 
+                    <span class="hero-word" style="--d: 0.4s;"><span class="spin-word">VUELTA</span></span><br class="desktop-only">
+                    <span class="hero-word" style="--d: 0.6s;">SE</span> 
+                    <span class="hero-word" style="--d: 0.7s;">DA</span><br>
+                    <span class="hero-word red-text" style="--d: 0.9s;">JUNTOS.</span>
+                </h1>
+                <p class="hero-subtitle reveal" style="transition-delay: 0.2s;">
+                    <span class="sub-word" style="--d: 1.1s;">CORRE.</span> 
+                    <span class="sub-word" style="--d: 1.3s;">COMPARTE.</span> 
+                    <span class="sub-word" style="--d: 1.5s;">CONECTA.</span> 
+                    <span class="sub-word" style="--d: 1.7s;">VUELVE.</span>
+                </p>
+                <div class="hero-actions">
+                    <a href="#unirme" class="btn-hero" style="display: none;"><span>ÚNETE AL MOVIMIENTO</span></a>
+                    <a href="https://chat.whatsapp.com/Cp3RDa8gnTD4KBhGJkbCvA?mode=gi_t" target="_blank" class="btn-hero btn-hero-whatsapp">
+                        <span><i class="fa-brands fa-whatsapp"></i> ACTÍVATE CON EL CREW</span>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="hero-bottom-action">
-            <a href="#unirme" class="btn-mega">ÚNETE AL MOVIMIENTO ↓</a>
+    </section>
+
+    <!-- Sub-hero Feature Bar -->
+    <div class="feature-bar">
+        <div class="container feature-bar-container">
+            <!-- Item 1 -->
+            <div class="feature-item reveal-scale" style="transition-delay: 0.1s;">
+                <span class="feature-number">01</span>
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17.5 19A4.5 4.5 0 0 0 22 14.5c0-2.3-1.7-4.2-4-4.5A7 7 0 1 0 5 11.5c-2.2.3-4 2.2-4 4.5A4.5 4.5 0 0 0 5.5 19H17.5z" />
+                    </svg>
+                </div>
+                <h3 class="feature-text">NADIE CORRE<br>CON EGO</h3>
+            </div>
+            <!-- Item 2 -->
+            <div class="feature-item reveal-scale" style="transition-delay: 0.25s;">
+                <span class="feature-number">02</span>
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
+                </div>
+                <h3 class="feature-text">TODOS LOS RITMOS<br>SE RESPETAN</h3>
+            </div>
+            <!-- Item 3 -->
+            <div class="feature-item reveal-scale" style="transition-delay: 0.4s;">
+                <span class="feature-number">03</span>
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="8.5" cy="7" r="4" />
+                        <line x1="20" y1="8" x2="20" y2="14" />
+                        <line x1="23" y1="11" x2="17" y2="11" />
+                    </svg>
+                </div>
+                <h3 class="feature-text">EL NUEVO<br>SE INTEGRA</h3>
+            </div>
+            <!-- Item 4 -->
+            <div class="feature-item reveal-scale" style="transition-delay: 0.55s;">
+                <span class="feature-number">04</span>
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                </div>
+                <h3 class="feature-text">UNA COMUNIDAD<br>QUE TE IMPULSA</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Manifesto -->
+    <section id="manifesto" class="manifesto">
+        <!-- Technical track lane lines in the background -->
+        <div class="track-lines">
+            <div class="track-line"></div>
+            <div class="track-line"></div>
+            <div class="track-line"></div>
+        </div>
+
+        <!-- Animated Footprints -->
+        <div class="running-footprints">
+            <div class="footprint left">
+                <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 5.5 3 10C3 13.5 5 16.5 8 18L8.5 22C9 24.5 10.5 26 12 26C13.5 26 15 24.5 15.5 22L16 18C19 16.5 21 13.5 21 10C21 5.5 17 2 12 2Z" fill="currentColor"/>
+                    <path d="M12 34C8.5 34 6 36 6 39.5L6.5 44C7 46 9 46.5 12 46.5C15 46.5 17 46 17.5 44L18 39.5C18 36 15.5 34 12 34Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="footprint right">
+                <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 5.5 3 10C3 13.5 5 16.5 8 18L8.5 22C9 24.5 10.5 26 12 26C13.5 26 15 24.5 15.5 22L16 18C19 16.5 21 13.5 21 10C21 5.5 17 2 12 2Z" fill="currentColor"/>
+                    <path d="M12 34C8.5 34 6 36 6 39.5L6.5 44C7 46 9 46.5 12 46.5C15 46.5 17 46 17.5 44L18 39.5C18 36 15.5 34 12 34Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="footprint left">
+                <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 5.5 3 10C3 13.5 5 16.5 8 18L8.5 22C9 24.5 10.5 26 12 26C13.5 26 15 24.5 15.5 22L16 18C19 16.5 21 13.5 21 10C21 5.5 17 2 12 2Z" fill="currentColor"/>
+                    <path d="M12 34C8.5 34 6 36 6 39.5L6.5 44C7 46 9 46.5 12 46.5C15 46.5 17 46 17.5 44L18 39.5C18 36 15.5 34 12 34Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="footprint right">
+                <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 5.5 3 10C3 13.5 5 16.5 8 18L8.5 22C9 24.5 10.5 26 12 26C13.5 26 15 24.5 15.5 22L16 18C19 16.5 21 13.5 21 10C21 5.5 17 2 12 2Z" fill="currentColor"/>
+                    <path d="M12 34C8.5 34 6 36 6 39.5L6.5 44C7 46 9 46.5 12 46.5C15 46.5 17 46 17.5 44L18 39.5C18 36 15.5 34 12 34Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="footprint left">
+                <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 5.5 3 10C3 13.5 5 16.5 8 18L8.5 22C9 24.5 10.5 26 12 26C13.5 26 15 24.5 15.5 22L16 18C19 16.5 21 13.5 21 10C21 5.5 17 2 12 2Z" fill="currentColor"/>
+                    <path d="M12 34C8.5 34 6 36 6 39.5L6.5 44C7 46 9 46.5 12 46.5C15 46.5 17 46 17.5 44L18 39.5C18 36 15.5 34 12 34Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="footprint right">
+                <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 5.5 3 10C3 13.5 5 16.5 8 18L8.5 22C9 24.5 10.5 26 12 26C13.5 26 15 24.5 15.5 22L16 18C19 16.5 21 13.5 21 10C21 5.5 17 2 12 2Z" fill="currentColor"/>
+                    <path d="M12 34C8.5 34 6 36 6 39.5L6.5 44C7 46 9 46.5 12 46.5C15 46.5 17 46 17.5 44L18 39.5C18 36 15.5 34 12 34Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="footprint left">
+                <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 5.5 3 10C3 13.5 5 16.5 8 18L8.5 22C9 24.5 10.5 26 12 26C13.5 26 15 24.5 15.5 22L16 18C19 16.5 21 13.5 21 10C21 5.5 17 2 12 2Z" fill="currentColor"/>
+                    <path d="M12 34C8.5 34 6 36 6 39.5L6.5 44C7 46 9 46.5 12 46.5C15 46.5 17 46 17.5 44L18 39.5C18 36 15.5 34 12 34Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="footprint right">
+                <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 5.5 3 10C3 13.5 5 16.5 8 18L8.5 22C9 24.5 10.5 26 12 26C13.5 26 15 24.5 15.5 22L16 18C19 16.5 21 13.5 21 10C21 5.5 17 2 12 2Z" fill="currentColor"/>
+                    <path d="M12 34C8.5 34 6 36 6 39.5L6.5 44C7 46 9 46.5 12 46.5C15 46.5 17 46 17.5 44L18 39.5C18 36 15.5 34 12 34Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="footprint left">
+                <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 5.5 3 10C3 13.5 5 16.5 8 18L8.5 22C9 24.5 10.5 26 12 26C13.5 26 15 24.5 15.5 22L16 18C19 16.5 21 13.5 21 10C21 5.5 17 2 12 2Z" fill="currentColor"/>
+                    <path d="M12 34C8.5 34 6 36 6 39.5L6.5 44C7 46 9 46.5 12 46.5C15 46.5 17 46 17.5 44L18 39.5C18 36 15.5 34 12 34Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="footprint right">
+                <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 5.5 3 10C3 13.5 5 16.5 8 18L8.5 22C9 24.5 10.5 26 12 26C13.5 26 15 24.5 15.5 22L16 18C19 16.5 21 13.5 21 10C21 5.5 17 2 12 2Z" fill="currentColor"/>
+                    <path d="M12 34C8.5 34 6 36 6 39.5L6.5 44C7 46 9 46.5 12 46.5C15 46.5 17 46 17.5 44L18 39.5C18 36 15.5 34 12 34Z" fill="currentColor"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="container manifesto-grid">
+            <div class="manifesto-content">
+                <!-- Technical Coordinates Badge -->
+                <div class="manifesto-tech-badge reveal" style="transition-delay: 0.1s;">
+                    <span class="tech-tag"><i class="fa-solid fa-location-dot"></i> MARACAY, VEN</span>
+                </div>
+                
+                <h2 class="manifesto-title reveal-left" style="transition-delay: 0.2s;">
+                    VIENES POR EL <span class="highlight-word energetic-highlight">RUNNING.</span><br>
+                    TE QUEDAS POR LA<br>
+                    <span class="highlight-word energetic-highlight red-text glow-red">COMUNIDAD.</span>
+                </h2>
+                <p class="manifesto-lead reveal" style="transition-delay: 0.3s;">
+                    La Vuelta es más que salir a correr. Es un escape urbano, compartir kilómetros reales, desafiar la inercia y construir una cultura juntos en el asfalto.
+                </p>
+                <div class="manifesto-actions reveal" style="transition-delay: 0.4s;">
+                    <a href="#unirme" class="manifesto-link" style="display: none;">CONOCE MÁS <span class="arrow">&rarr;</span></a>
+                    <span class="running-status-tag"><i class="fa-solid fa-person-running"></i> TODOS LOS RITMOS BIENVENIDOS</span>
+                </div>
+            </div>
+            
+            <div class="manifesto-visuals">
+                <!-- Polaroid video card -->
+                <div class="manifesto-image-wrapper reveal-right" style="transition-delay: 0.15s;">
+                    <!-- Masking tape top-left -->
+                    <div class="tape tape-tl"></div>
+                    <!-- Loop Video of runners -->
+                    <video autoplay muted loop playsinline webkit-playsinline class="manifesto-photo manifesto-video">
+                        <source src="assets/manifesto-video.mov" type="video/mp4">
+                        Tu navegador no soporta reproducción de video.
+                    </video>
+                    <!-- Masking tape bottom-right -->
+                    <div class="tape tape-br"></div>
+                    
+                    <!-- Circular Stamp top-right -->
+                    <div class="stamp-wrap">
+                        <svg viewBox="0 0 100 100" class="stamp-svg">
+                            <path id="stampCirclePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none" />
+                            <text fill="#C4BAB3" font-family="'Outfit', sans-serif" font-size="8" font-weight="800" letter-spacing="1">
+                                <textPath href="#stampCirclePath">LA VUELTA • CORRE • COMPARTE • CONECTA •</textPath>
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Interactive Race Bib (Dorsal de Corredor) -->
+                <div class="race-bib">
+                    <!-- Safety Pins in 3D -->
+                    <div class="safety-pin pin-tl">
+                        <div class="pin-loop"></div>
+                        <div class="pin-clasp"></div>
+                    </div>
+                    <div class="safety-pin pin-tr">
+                        <div class="pin-loop"></div>
+                        <div class="pin-clasp"></div>
+                    </div>
+                    <div class="safety-pin pin-bl">
+                        <div class="pin-loop"></div>
+                        <div class="pin-clasp"></div>
+                    </div>
+                    <div class="safety-pin pin-br">
+                        <div class="pin-loop"></div>
+                        <div class="pin-clasp"></div>
+                    </div>
+
+                    <!-- Race Bib Core Content -->
+                    <div class="bib-header">
+                        <span class="bib-status-badge">PRÓXIMAMENTE</span>
+                        <div class="bib-logo">LA VUELTA</div>
+                        <div class="bib-sub">MARACAY SOCIAL RUN CLUB</div>
+                    </div>
+                    <div class="bib-number">002</div>
+                    <div class="bib-footer">
+                        <div class="bib-data-column">
+                            <span class="bib-data-label">MODALIDAD</span>
+                            <span class="bib-data-val">5K / SOCIAL</span>
+                        </div>
+                        
+                        <!-- Realistic CSS Barcode -->
+                        <div class="bib-barcode">
+                            <div class="barcode-stripes"></div>
+                            <span class="barcode-number">EST-2026-LV02</span>
+                        </div>
+                        
+                        <div class="bib-data-column text-right">
+                            <span class="bib-data-label">EDICIÓN</span>
+                            <span class="bib-data-val">RUN #02</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -50,98 +318,181 @@
         </div>
     </div>
 
-    <!-- The Manifesto -->
-    <section class="manifesto">
-        <div class="container manifesto-grid">
-            <div class="manifesto-huge-text">
-                <h2>VIENES POR EL RUNNING. TE QUEDAS POR LA COMUNIDAD.</h2>
-            </div>
-            <div class="manifesto-body">
-                <p>Una comunidad que corre junta y se queda un rato más.</p>
-                <p>No somos un club elitista ni una app genérica. Somos gente activa de Maracay moviéndose junta.</p>
-                <p class="bronze-highlight">Lo importante es volver. Aquí corremos en serio, pero sin creernos superiores. Todos los ritmos tienen espacio.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- The Crew (Historia) -->
-    <section class="the-crew">
-        <div class="container">
-            <div class="crew-grid">
-                <div class="crew-image">
-                    <!-- Placeholder fotográfico estilo crudo -->
+    <!-- The Crew (Origen) -->
+    <section id="crews" class="the-crew">
+        <div class="container crew-container">
+            <div class="crew-content">
+                <h2 class="crew-title reveal-left" style="transition-delay: 0.1s;">ALGO ESTÁ NACIENDO<br>EN <span class="highlight-word energetic-highlight red-text glow-red">MARACAY.</span></h2>
+                <div class="crew-body">
+                    <p class="reveal" style="transition-delay: 0.25s;">Tres amigos decidimos crear<br>un espacio diferente.</p>
+                    <p class="reveal" style="transition-delay: 0.4s;">Un lugar donde todos<br>son bienvenidos.</p>
                 </div>
-                <div class="crew-content">
-                    <h2>ALGO ESTÁ NACIENDO EN MARACAY.</h2>
-                    <p>La marca nace de una conversación real entre panas. Gabriel acababa de llegar de Argentina y nos dimos cuenta de algo:</p>
-                    <p>Hay mucha gente corriendo, pero lo hacen solos. Faltaba una comunidad fuerte, urbana, con identidad.</p>
-                    <p>Así decidimos crear La Vuelta: el puente entre los que ya corren y los que quieren sumarse. Una excusa para salir a la calle, sudar y conectar.</p>
+                <div class="crew-members-badges reveal" style="transition-delay: 0.55s;">
+                    <a href="https://www.instagram.com/gabrielechirinos/" target="_blank" class="crew-badge">
+                        <span class="crew-role">CREW</span>
+                        <span class="crew-name">GABRIEL</span>
+                    </a>
+                    <a href="https://www.instagram.com/_byaidan/" target="_blank" class="crew-badge">
+                        <span class="crew-role">CREW</span>
+                        <span class="crew-name">AIDAN</span>
+                    </a>
+                    <a href="https://www.instagram.com/waiharrington/" target="_blank" class="crew-badge">
+                        <span class="crew-role">CREW</span>
+                        <span class="crew-name">WAI</span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- The Drop (Evento Próximamente) -->
-    <section id="unirme" class="the-drop">
+    <section id="unirme" class="the-drop" style="display: none;">
         <div class="drop-container">
-            <div class="drop-header">
-                <span class="drop-badge">NUESTRA COMUNIDAD</span>
-                <h2>PRIMER EVENTO:<br>PRÓXIMAMENTE</h2>
+            <h2 class="drop-title reveal-left" style="transition-delay: 0.05s;">PRÓXIMO EVENTO:<br>SOCIAL RUN #02</h2>
+            <p class="drop-desc reveal" style="transition-delay: 0.15s;">¡Nuestra primera salida de 5K fue un éxito rotundo! Ya estamos coordinando la fecha y ruta para el siguiente encuentro. Únete al grupo para enterarte antes que nadie y votar por el próximo día.</p>
+            
+            <div class="event-cards-grid">
+                <!-- Card 1: Fecha -->
+                <div class="event-card reveal-left" style="transition-delay: 0.1s;">
+                    <div class="event-card-icon">
+                        <i class="fa-regular fa-calendar-days"></i>
+                    </div>
+                    <div class="event-card-content">
+                        <span class="event-card-label">FECHA Y HORA</span>
+                        <span class="event-card-value">PRÓXIMAMENTE - VOTA EN EL GRUPO</span>
+                    </div>
+                </div>
+                
+                <!-- Card 2: Ubicación -->
+                <div class="event-card reveal-right" style="transition-delay: 0.2s;">
+                    <div class="event-card-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="event-card-content">
+                        <span class="event-card-label">UBICACIÓN</span>
+                        <span class="event-card-value">MARACAY - RUTA POR DEFINIR</span>
+                    </div>
+                </div>
             </div>
             
-            <div class="drop-grid">
-                <div class="drop-info">
-                    <p class="drop-desc">Aún no hemos fijado la fecha exacta para nuestra primera salida oficial en Maracay, pero la comunidad ya se está armando en WhatsApp.</p>
-                    <ul class="drop-details">
-                        <li><span class="label">ESTADO</span> <span class="value">ORGANIZANDO LA VUELTA</span></li>
-                        <li><span class="label">UBICACIÓN</span> <span class="value">MARACAY</span></li>
-                    </ul>
-                </div>
-                <div class="drop-action">
-                    <a href="https://chat.whatsapp.com/Cp3RDa8gnTD4KBhGJkbCvA?mode=gi_t" target="_blank" class="btn-action-primary">ENTRAR AL GRUPO DE WHATSAPP</a>
-                    <p class="drop-note">*Únete a nuestro grupo para enterarte antes que nadie de la fecha oficial y ruta de la primera corrida.</p>
-                </div>
+            <div class="drop-action-container reveal" style="transition-delay: 0.3s;">
+                <a href="https://chat.whatsapp.com/Cp3RDa8gnTD4KBhGJkbCvA?mode=gi_t" target="_blank" class="btn-action-primary"><span><i class="fa-brands fa-whatsapp"></i> ENTRAR AL GRUPO DE WHATSAPP</span></a>
+                <p class="drop-note">*Únete a nuestro grupo para coordinar la salida y conocer la ruta detallada.</p>
             </div>
+        </div>
+        <div class="drop-flyer-wrapper reveal-scale" style="display: none; transition-delay: 0.15s;">
+            <img src="assets/drop-flyer.jpeg" alt="Flyer Social Run La Vuelta" class="drop-flyer-img">
         </div>
     </section>
 
+    <!-- Founders Section (Tres Amigos. Una Misma Idea.) -->
+    <div class="founders-scroll-track">
+        <section id="founders" class="founders">
+            <div class="container founders-container">
+                <div class="founders-info reveal-left" style="transition-delay: 0.1s;">
+                    <span class="founders-pretitle">CONOCE A LOS QUE <br><span class="red-text">EMPEZARON LA VUELTA</span></span>
+                    <h2 class="founders-title">TRES AMIGOS.<br>UNA MISMA IDEA.</h2>
+                    <p class="founders-subtitle">CORRER, CRECER Y DISFRUTAR EL PROCESO.</p>
+                </div>
+                
+                <div class="founders-grid">
+                    <!-- Gabriel -->
+                    <div class="founder-card reveal-scale" style="transition-delay: 0.1s;">
+                        <div class="founder-photo-wrapper">
+                            <img src="assets/gabriel.png" alt="Gabriel" class="founder-photo">
+                        </div>
+                        <div class="founder-info">
+                            <h3 class="founder-name">GABRIEL</h3>
+                            <span class="founder-role-title">EL INICIO.</span>
+                            <p class="founder-desc">Él tuvo la idea de empezar. Creyó que correr podía ser más que entrenar; podía convertirse en comunidad.</p>
+                            <span class="founder-footer">FUNDADOR</span>
+                        </div>
+                    </div>
+
+                    <!-- Aidan -->
+                    <div class="founder-card reveal-scale" style="transition-delay: 0.25s;">
+                        <div class="founder-photo-wrapper">
+                            <img src="assets/aidan.png" alt="Aidan" class="founder-photo">
+                        </div>
+                        <div class="founder-info">
+                            <h3 class="founder-name">AIDAN</h3>
+                            <span class="founder-role-title">EL RITMO.</span>
+                            <p class="founder-desc">Le pone ritmo a la vuelta. Corre con la idea de que nadie tiene que ir al mismo paso para pertenecer.</p>
+                            <span class="founder-footer">FUNDADOR</span>
+                        </div>
+                    </div>
+
+                    <!-- Wai -->
+                    <div class="founder-card reveal-scale" style="transition-delay: 0.4s;">
+                        <div class="founder-photo-wrapper">
+                            <img src="assets/wai.png" alt="Wai" class="founder-photo">
+                        </div>
+                        <div class="founder-info">
+                            <h3 class="founder-name">WAI</h3>
+                            <span class="founder-role-title">LA CONEXIÓN.</span>
+                            <p class="founder-desc">Cree en hacerlo juntos. Para él, La Vuelta no se trata solo de correr. Se trata de volver, compartir y seguir.</p>
+                            <span class="founder-footer">FUNDADOR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <!-- FAQ -->
-    <section class="faq">
+    <section id="faqs" class="faq">
         <div class="container faq-container">
-            <h2 class="faq-title">PREGUNTAS<br>FRECUENTES</h2>
+            <h2 class="faq-title reveal-left">PREGUNTAS FRECUENTES</h2>
             <div class="faq-accordion">
-                <div class="faq-item">
+                <div class="faq-item reveal" style="transition-delay: 0.05s;">
                     <button class="faq-btn">¿PUEDO IR SI NUNCA HE CORRIDO?</button>
                     <div class="faq-content"><p>Totalmente. Alternamos caminar y correr. Nadie se queda atrás y siempre habrá alguien que vaya a tu ritmo.</p></div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item reveal" style="transition-delay: 0.15s;">
                     <button class="faq-btn">ME DA PENA LLEGAR SOLO, ¿QUÉ HAGO?</button>
                     <div class="faq-content"><p>El 80% llega solo la primera vez. Nuestra regla de oro es que el nuevo se integra. Te presentaremos a alguien apenas llegues.</p></div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item reveal" style="transition-delay: 0.25s;">
                     <button class="faq-btn">¿SOY MUY LENTO PARA EL GRUPO?</button>
                     <div class="faq-content"><p>Aquí se corre, no se compite. Si vas a paso suave, habrá alguien acompañándote.</p></div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item reveal" style="transition-delay: 0.35s;">
                     <button class="faq-btn">¿CUÁNTO CUESTA?</button>
                     <div class="faq-content"><p>Las salidas generales son 100% gratuitas. Ven, corre y comparte sin compromiso.</p></div>
                 </div>
+            </div>
+            <div class="faq-action reveal" style="transition-delay: 0.45s;">
+                <a href="https://chat.whatsapp.com/Cp3RDa8gnTD4KBhGJkbCvA?mode=gi_t" target="_blank" class="btn-action-primary"><span>VER MÁS PREGUNTAS</span></a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-grid">
-            <h2 class="footer-logo">LA VUELTA.</h2>
-            <div class="footer-links">
-                <p>MARACAY, VENEZUELA.</p>
-                <a href="https://www.instagram.com/lavueltarunclub?igsh=MWxlbDVpaXIzOWs1cw==" target="_blank" class="social-link">INSTAGRAM</a>
-                <a href="https://chat.whatsapp.com/Cp3RDa8gnTD4KBhGJkbCvA?mode=gi_t" target="_blank" class="social-link">WHATSAPP</a>
+        <div class="container footer-container reveal-scale">
+            <img src="assets/logo-round.png" alt="La Vuelta Logo" class="footer-logo">
+            <div class="footer-names">
+                <a href="https://www.instagram.com/gabrielechirinos/" target="_blank">GABRIEL</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+                <a href="https://www.instagram.com/_byaidan/" target="_blank">AIDAN</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+                <a href="https://www.instagram.com/waiharrington/" target="_blank">WAI</a>
             </div>
+            <p class="footer-desc">SOMOS 3 AMIGOS CON LA MISMA IDEA: CORRER, CRECER Y DISFRUTAR EL PROCESO.</p>
+            <div class="footer-social-icons">
+                <a href="https://www.instagram.com/lavueltarun/" target="_blank" class="footer-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://chat.whatsapp.com/Cp3RDa8gnTD4KBhGJkbCvA?mode=gi_t" target="_blank" class="footer-social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <p class="footer-copy">&copy; 2026 LA VUELTA. TODOS LOS DERECHOS RESERVADOS.</p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+
+
+    <!-- Botón Volver Arriba -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js?v=2.0"></script>
 </body>
 </html>
